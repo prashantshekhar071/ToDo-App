@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #d4d4d4, #ffffff);
+    padding: 20px;
+}
+
+header{
+    margin-top: 20px;
+}
+
+header h1{
+    font-family: 'Playfair Display', serif;
+    color: #EE562F;
+    text-align: center;
+    text-shadow: 1px 1px #bea9a9;
+}
+
+header + section{
+    height: 25vh;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+form input, form select{
+    margin-bottom: 12px;
+    padding: 8px 16px;
+    width: 300px;
+    border: 3px solid rgb(192, 192, 192);
+    transition: 0.5s;
+    outline: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+form input:focus, form select:focus{
+    border: 3px solid #555;
+}
+
+
+form button{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    outline: none;
+    border: 2px solid #555;
+    transition: ease-in 0.5s;
+    letter-spacing: 2px;
+}
+
+form button:hover{
+    background-color: #555;
+    border: 2px solid #ffffff;
+    color: #e6e6e6;   
+}
+
+#tasks-section{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tasks-section .task-div{
+    width: 400px;
+    height: 50px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #555;
+}
+
+
+.task-div p{
+    margin-left: 10px;
+    width: 75%;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+}
+
+.task-div .check-cross-div{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-cross-div i{
+    font-size: large;
+    pointer-events: none;
+    text-decoration: none;
+}
+
+.task-div .check-div, .task-div .cross-div{
+    height: 100%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.task-div .check-div{
+    color: #58b368;
+}
+
+.task-div .cross-div{
+    color: #e74645;
+}
+
+.checked p{
+    text-decoration: line-through;
+}
+
+.checked{
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+
